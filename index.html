@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="darkmode-option">
+        <div class="inner-div">
+            <div class="circle-section"></div>
+        </div>
+
+    </div>
+    <div class="container">
+
+    </div>
+    <script>
+        const circle = document.querySelector(".circle-section");
+        const container = document.querySelector(".container");
+        let a = 1;
+        circle.addEventListener('click', function() {
+            // circle.style.backgroundColor = "black";
+            if (a == 1) {
+                circle.style.marginLeft = "50px";
+                circle.style.transition = "0.7s";
+                container.style.backgroundColor = "black";
+
+                a = 0;
+            } else if (a == 0) {
+                circle.style.marginLeft = "0px";
+                circle.style.transition = "0.7s";
+                container.style.backgroundColor = "rgb(205, 243, 205)";
+                a = 1;
+            }
+
+        });
+    </script>
+</body>
+
+</html>
